@@ -20,7 +20,7 @@ $header_alt_text         = sprintf(
 	$display_version
 );
 
-require_once ABSPATH . 'wp-admin/admin-header.php';
+require ABSPATH . 'wp-admin/admin-header.php';
 
 $credits = wp_credits();
 ?>
@@ -81,7 +81,7 @@ $credits = wp_credits();
 <?php
 if ( ! $credits ) {
 	echo '</div>';
-	require_once ABSPATH . 'wp-admin/admin-footer.php';
+	require ABSPATH . 'wp-admin/admin-footer.php';
 	exit;
 }
 ?>
@@ -128,7 +128,7 @@ if ( ! $credits ) {
 </div>
 <?php
 
-require_once ABSPATH . 'wp-admin/admin-footer.php';
+require ABSPATH . 'wp-admin/admin-footer.php';
 
 return;
 

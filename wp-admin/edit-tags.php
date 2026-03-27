@@ -319,7 +319,7 @@ if ( 'category' === $taxonomy || 'link_category' === $taxonomy || 'post_tag' ===
 	unset( $help );
 }
 
-require_once ABSPATH . 'wp-admin/admin-header.php';
+require ABSPATH . 'wp-admin/admin-header.php';
 
 // Also used by the Edit Tag form.
 require_once ABSPATH . 'wp-admin/includes/edit-tag-messages.php';
@@ -697,4 +697,4 @@ endif;
 
 $wp_list_table->inline_edit();
 
-require_once ABSPATH . 'wp-admin/admin-footer.php';
+require ABSPATH . 'wp-admin/admin-footer.php';

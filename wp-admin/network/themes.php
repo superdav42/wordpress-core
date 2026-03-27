@@ -85,7 +85,7 @@ if ( $action ) {
 			$title       = __( 'Update Themes' );
 			$parent_file = 'themes.php';
 
-			require_once ABSPATH . 'wp-admin/admin-header.php';
+			require ABSPATH . 'wp-admin/admin-header.php';
 
 			echo '<div class="wrap">';
 			echo '<h1>' . esc_html( $title ) . '</h1>';
@@ -95,7 +95,7 @@ if ( $action ) {
 
 			echo "<iframe src='$url' style='width: 100%; height:100%; min-height:850px;'></iframe>";
 			echo '</div>';
-			require_once ABSPATH . 'wp-admin/admin-footer.php';
+			require ABSPATH . 'wp-admin/admin-footer.php';
 			exit;
 		case 'delete-selected':
 			if ( ! current_user_can( 'delete_themes' ) ) {
@@ -129,7 +129,7 @@ if ( $action ) {
 
 			if ( ! isset( $_REQUEST['verify-delete'] ) ) {
 				wp_enqueue_script( 'jquery' );
-				require_once ABSPATH . 'wp-admin/admin-header.php';
+				require ABSPATH . 'wp-admin/admin-header.php';
 				$themes_to_delete = count( $themes );
 				?>
 				<div class="wrap">
@@ -199,7 +199,7 @@ if ( $action ) {
 				</div>
 				<?php
 
-				require_once ABSPATH . 'wp-admin/admin-footer.php';
+				require ABSPATH . 'wp-admin/admin-footer.php';
 				exit;
 			} // End if verify-delete.
 
@@ -355,7 +355,7 @@ $parent_file = 'themes.php';
 wp_enqueue_script( 'updates' );
 wp_enqueue_script( 'theme-preview' );
 
-require_once ABSPATH . 'wp-admin/admin-header.php';
+require ABSPATH . 'wp-admin/admin-header.php';
 
 ?>
 
@@ -485,4 +485,4 @@ wp_print_request_filesystem_credentials_modal();
 wp_print_admin_notice_templates();
 wp_print_update_row_templates();
 
-require_once ABSPATH . 'wp-admin/admin-footer.php';
+require ABSPATH . 'wp-admin/admin-footer.php';

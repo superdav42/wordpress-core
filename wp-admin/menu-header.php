@@ -70,6 +70,7 @@ get_admin_page_parent();
  * @param array $submenu
  * @param bool  $submenu_as_parent
  */
+if ( ! function_exists( '_wp_menu_output' ) ) :
 function _wp_menu_output( $menu, $submenu, $submenu_as_parent = true ) {
 	global $self, $parent_file, $submenu_file, $plugin_page, $typenow;
 
@@ -287,6 +288,7 @@ function _wp_menu_output( $menu, $submenu, $submenu_as_parent = true ) {
 		'<span class="collapse-button-label">' . __( 'Collapse Menu' ) . '</span>' .
 		'</button></li>';
 }
+endif;
 
 ?>
 

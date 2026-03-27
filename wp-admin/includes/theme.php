@@ -35,9 +35,9 @@ function delete_theme( $stylesheet, $redirect = '' ) {
 
 	if ( false === $credentials ) {
 		if ( ! empty( $data ) ) {
-			require_once ABSPATH . 'wp-admin/admin-header.php';
+			require ABSPATH . 'wp-admin/admin-header.php';
 			echo $data;
-			require_once ABSPATH . 'wp-admin/admin-footer.php';
+			require ABSPATH . 'wp-admin/admin-footer.php';
 			exit;
 		}
 		return;
@@ -50,9 +50,9 @@ function delete_theme( $stylesheet, $redirect = '' ) {
 		$data = ob_get_clean();
 
 		if ( ! empty( $data ) ) {
-			require_once ABSPATH . 'wp-admin/admin-header.php';
+			require ABSPATH . 'wp-admin/admin-header.php';
 			echo $data;
-			require_once ABSPATH . 'wp-admin/admin-footer.php';
+			require ABSPATH . 'wp-admin/admin-footer.php';
 			exit;
 		}
 		return;

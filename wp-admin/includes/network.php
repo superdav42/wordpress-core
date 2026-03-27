@@ -129,7 +129,7 @@ function network_step1( $errors = false ) {
 		);
 
 		echo '</div>';
-		require_once ABSPATH . 'wp-admin/admin-footer.php';
+		require ABSPATH . 'wp-admin/admin-footer.php';
 		die();
 	}
 
@@ -145,7 +145,7 @@ function network_step1( $errors = false ) {
 		);
 		echo '<p>' . __( 'Once the network is created, you may reactivate your plugins.' ) . '</p>';
 		echo '</div>';
-		require_once ABSPATH . 'wp-admin/admin-footer.php';
+		require ABSPATH . 'wp-admin/admin-footer.php';
 		die();
 	}
 

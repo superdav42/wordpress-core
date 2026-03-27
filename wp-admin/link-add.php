@@ -31,4 +31,4 @@ if ( wp_is_mobile() ) {
 $link = get_default_link_to_edit();
 require ABSPATH . 'wp-admin/edit-link-form.php';
 
-require_once ABSPATH . 'wp-admin/admin-footer.php';
+require ABSPATH . 'wp-admin/admin-footer.php';

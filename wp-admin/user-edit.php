@@ -198,7 +198,7 @@ switch ( $action ) {
 		$title    = sprintf( $title, $profile_user->display_name );
 		$sessions = WP_Session_Tokens::get_instance( $profile_user->ID );
 
-		require_once ABSPATH . 'wp-admin/admin-header.php';
+		require ABSPATH . 'wp-admin/admin-header.php';
 		?>
 
 		<?php
@@ -1022,4 +1022,4 @@ switch ( $action ) {
 	</script>
 <?php endif; ?>
 <?php
-require_once ABSPATH . 'wp-admin/admin-footer.php';
+require ABSPATH . 'wp-admin/admin-footer.php';

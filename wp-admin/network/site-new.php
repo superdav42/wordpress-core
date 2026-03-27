@@ -184,7 +184,7 @@ $parent_file = 'sites.php';
 
 wp_enqueue_script( 'user-suggest' );
 
-require_once ABSPATH . 'wp-admin/admin-header.php';
+require ABSPATH . 'wp-admin/admin-header.php';
 
 ?>
 
@@ -301,4 +301,4 @@ if ( ! empty( $messages ) ) {
 	</form>
 </div>
 <?php
-require_once ABSPATH . 'wp-admin/admin-footer.php';
+require ABSPATH . 'wp-admin/admin-footer.php';

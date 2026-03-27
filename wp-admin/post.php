@@ -366,4 +366,4 @@ switch ( $action ) {
 		exit;
 } // End switch.
 
-require_once ABSPATH . 'wp-admin/admin-footer.php';
+require ABSPATH . 'wp-admin/admin-footer.php';

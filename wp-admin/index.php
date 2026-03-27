@@ -134,7 +134,7 @@ $screen->set_help_sidebar(
 	'<p>' . $wp_version_text . '</p>'
 );
 
-require_once ABSPATH . 'wp-admin/admin-header.php';
+require ABSPATH . 'wp-admin/admin-header.php';
 ?>
 
 <div class="wrap">
@@ -209,4 +209,4 @@ if ( has_action( 'welcome_panel' ) && current_user_can( 'edit_theme_options' ) )
 <?php
 wp_print_community_events_templates();
 
-require_once ABSPATH . 'wp-admin/admin-footer.php';
+require ABSPATH . 'wp-admin/admin-footer.php';

@@ -3719,6 +3719,78 @@ function wp_nonce_ays( $action ) {
 }
 
 /**
+ * Fires the wp_exit action and then exits.
+ *
+ * Allows long-running PHP applications to intercept exit calls.
+ *
+ * @since 5.8.0 (superdav42 fork)
+ *
+ * @param string $message Optional. Message to pass to exit.
+ */
+function wp_exit( $message = '' ) {
+	do_action( 'wp_exit', $message );
+	exit( $message );
+}
+
+/**
+ * Fires the wp_header action and then sends the header.
+ *
+ * Allows long-running PHP applications to intercept header() calls.
+ *
+ * @since 5.8.0 (superdav42 fork)
+ *
+ * @param string $header     The header string.
+ * @param bool   $replace    Whether to replace a previous similar header.
+ * @param int    $response_code Optional. Forces the HTTP response code.
+ */
+function wp_header( $header, $replace = true, $response_code = null ) {
+	do_action( 'wp_header', $header, $replace, $response_code );
+	if ( null !== $response_code ) {
+		header( $header, $replace, $response_code );
+	} else {
+		header( $header, $replace );
+	}
+}
+
+/**
+ * Fires the wp_header_remove action and then removes the header.
+ *
+ * Allows long-running PHP applications to intercept header_remove() calls.
+ *
+ * @since 5.8.0 (superdav42 fork)
+ *
+ * @param string $header The header name to remove.
+ */
+function wp_header_remove( $header ) {
+	do_action( 'wp_header_remove', $header );
+	header_remove( $header );
+}
+
+/**
+ * Fires the wp_set_cookie action and then sets the cookie.
+ *
+ * Allows long-running PHP applications to intercept setcookie() calls.
+ *
+ * @since 5.8.0 (superdav42 fork)
+ *
+ * @param string       $name             Cookie name.
+ * @param string       $value            Cookie value.
+ * @param int|array    $expires_or_options Expiry time or options array.
+ * @param string       $path             Cookie path.
+ * @param string       $domain           Cookie domain.
+ * @param bool         $secure           Whether to transmit over HTTPS only.
+ * @param bool         $httponly         Whether accessible only over HTTP.
+ * @return bool
+ */
+function wp_set_cookie( $name, $value = '', $expires_or_options = 0, $path = '', $domain = '', $secure = false, $httponly = false ) {
+	do_action( 'wp_set_cookie', $name, $value, $expires_or_options, $path, $domain, $secure, $httponly );
+	if ( is_array( $expires_or_options ) ) {
+		return setcookie( $name, $value, $expires_or_options );
+	}
+	return setcookie( $name, $value, $expires_or_options, $path, $domain, $secure, $httponly );
+}
+
+/**
  * Kills WordPress execution and displays HTML page with an error message.
  *
  * This function complements the `die()` PHP function. The difference is that

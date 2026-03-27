@@ -133,7 +133,7 @@ get_current_screen()->set_screen_reader_content(
 /**
  * WordPress Administration Template Header.
  */
-require_once ABSPATH . 'wp-admin/admin-header.php';
+require ABSPATH . 'wp-admin/admin-header.php';
 
 WP_Plugin_Dependencies::initialize();
 WP_Plugin_Dependencies::display_admin_notice_for_unmet_dependencies();
@@ -210,4 +210,4 @@ wp_print_admin_notice_templates();
 /**
  * WordPress Administration Template Footer.
  */
-require_once ABSPATH . 'wp-admin/admin-footer.php';
+require ABSPATH . 'wp-admin/admin-footer.php';

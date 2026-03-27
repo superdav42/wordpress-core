@@ -121,7 +121,7 @@ switch ( $action ) {
 		}
 
 		require ABSPATH . 'wp-admin/edit-link-form.php';
-		require_once ABSPATH . 'wp-admin/admin-footer.php';
+		require ABSPATH . 'wp-admin/admin-footer.php';
 		break;
 
 	default:

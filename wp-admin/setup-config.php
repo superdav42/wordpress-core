@@ -321,7 +321,8 @@ switch ( $step ) {
 		/**#@-*/
 
 		// Re-construct $wpdb with these new values.
-		unset( $wpdb );
+		unset( $GLOBALS['wpdb'] );
+		$wpdb = $GLOBALS['wpdb'];
 		require_wp_db();
 
 		/*

@@ -63,7 +63,7 @@ wp_enqueue_script( 'dashboard' );
 wp_enqueue_script( 'plugin-install' );
 add_thickbox();
 
-require_once ABSPATH . 'wp-admin/admin-header.php';
+require ABSPATH . 'wp-admin/admin-header.php';
 
 ?>
 
@@ -81,4 +81,4 @@ require_once ABSPATH . 'wp-admin/admin-header.php';
 
 <?php
 wp_print_community_events_templates();
-require_once ABSPATH . 'wp-admin/admin-footer.php';
+require ABSPATH . 'wp-admin/admin-footer.php';

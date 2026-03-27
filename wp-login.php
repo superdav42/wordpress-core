@@ -38,6 +38,7 @@ if ( force_ssl_admin() && ! is_ssl() ) {
  * @param string        $message  Optional. Message to display in header. Default empty.
  * @param WP_Error|null $wp_error Optional. The error to pass. Defaults to a WP_Error instance.
  */
+if ( ! function_exists( 'login_header' ) ) :
 function login_header( $title = null, $message = '', $wp_error = null ) {
 	global $error, $interim_login, $action;
 
@@ -311,6 +312,7 @@ function login_header( $title = null, $message = '', $wp_error = null ) {
 		}
 	}
 } // End of login_header().
+endif;
 
 /**
  * Outputs the footer for the login page.
@@ -322,6 +324,7 @@ function login_header( $title = null, $message = '', $wp_error = null ) {
  *
  * @param string $input_id Which input to auto-focus.
  */
+if ( ! function_exists( 'login_footer' ) ) :
 function login_footer( $input_id = '' ) {
 	global $interim_login;
 
@@ -452,26 +455,31 @@ function login_footer( $input_id = '' ) {
 	</html>
 	<?php
 }
+endif;
 
 /**
  * Outputs the JavaScript to handle the form shaking on the login page.
  *
  * @since 3.0.0
  */
+if ( ! function_exists( 'wp_shake_js' ) ) :
 function wp_shake_js() {
 	wp_print_inline_script_tag( "document.querySelector('form').classList.add('shake');" );
 }
+endif;
 
 /**
  * Outputs the viewport meta tag for the login page.
  *
  * @since 3.7.0
  */
+if ( ! function_exists( 'wp_login_viewport_meta' ) ) :
 function wp_login_viewport_meta() {
 	?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<?php
 }
+endif;
 
 /*
  * Main part.

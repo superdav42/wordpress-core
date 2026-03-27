@@ -85,7 +85,7 @@ do_action( 'enqueue_block_editor_assets' );
 /** This action is documented in wp-admin/widgets-form.php */
 do_action( 'sidebar_admin_setup' );
 
-require_once ABSPATH . 'wp-admin/admin-header.php';
+require ABSPATH . 'wp-admin/admin-header.php';
 
 /** This action is documented in wp-admin/widgets-form.php */
 do_action( 'widgets_admin_page' );
@@ -140,4 +140,4 @@ do_action( 'widgets_admin_page' );
 /** This action is documented in wp-admin/widgets-form.php */
 do_action( 'sidebar_admin_page' );
 
-require_once ABSPATH . 'wp-admin/admin-footer.php';
+require ABSPATH . 'wp-admin/admin-footer.php';

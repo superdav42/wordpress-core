@@ -74,7 +74,7 @@ switch ( $action ) {
 		);
 
 		wp_enqueue_script( 'comment' );
-		require_once ABSPATH . 'wp-admin/admin-header.php';
+		require ABSPATH . 'wp-admin/admin-header.php';
 
 		if ( ! $comment ) {
 			comment_footer_die( __( 'Invalid comment ID.' ) . sprintf( ' <a href="%s">' . __( 'Go back' ) . '</a>.', 'javascript:history.go(-1)' ) );
@@ -117,7 +117,7 @@ switch ( $action ) {
 			die();
 		}
 
-		require_once ABSPATH . 'wp-admin/admin-header.php';
+		require ABSPATH . 'wp-admin/admin-header.php';
 
 		$formaction    = $action . 'comment';
 		$nonce_action  = ( 'approve' === $action ) ? 'approve-comment_' : 'delete-comment_';
@@ -384,4 +384,4 @@ switch ( $action ) {
 
 } // End switch.
 
-require_once ABSPATH . 'wp-admin/admin-footer.php';
+require ABSPATH . 'wp-admin/admin-footer.php';

@@ -93,7 +93,7 @@ get_current_screen()->set_help_sidebar(
 // Start by checking if this is a special request checking for the existence of certain filters.
 $health_check_site_status->check_wp_version_check_exists();
 
-require_once ABSPATH . 'wp-admin/admin-header.php';
+require ABSPATH . 'wp-admin/admin-header.php';
 ?>
 <div class="health-check-header">
 	<div class="health-check-title-section">
@@ -219,7 +219,7 @@ if ( isset( $_GET['tab'] ) && ! empty( $_GET['tab'] ) ) {
 	 */
 	do_action( 'site_health_tab_content', $_GET['tab'] );
 
-	require_once ABSPATH . 'wp-admin/admin-footer.php';
+	require ABSPATH . 'wp-admin/admin-footer.php';
 	return;
 } else {
 	wp_admin_notice(
@@ -321,4 +321,4 @@ if ( isset( $_GET['tab'] ) && ! empty( $_GET['tab'] ) ) {
 
 	<?php
 }
-require_once ABSPATH . 'wp-admin/admin-footer.php';
+require ABSPATH . 'wp-admin/admin-footer.php';

@@ -135,7 +135,7 @@ if ( $_POST ) {
 	exit;
 }
 
-require_once ABSPATH . 'wp-admin/admin-header.php';
+require ABSPATH . 'wp-admin/admin-header.php';
 
 if ( isset( $_GET['updated'] ) ) {
 	wp_admin_notice(
@@ -538,4 +538,4 @@ if ( isset( $_GET['updated'] ) ) {
 	</form>
 </div>
 
-<?php require_once ABSPATH . 'wp-admin/admin-footer.php'; ?>
+<?php require ABSPATH . 'wp-admin/admin-footer.php'; ?>

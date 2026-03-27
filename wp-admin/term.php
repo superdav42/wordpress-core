@@ -70,6 +70,6 @@ get_current_screen()->set_screen_reader_content(
 	)
 );
 wp_enqueue_script( 'admin-tags' );
-require_once ABSPATH . 'wp-admin/admin-header.php';
+require ABSPATH . 'wp-admin/admin-header.php';
 require ABSPATH . 'wp-admin/edit-tag-form.php';
-require_once ABSPATH . 'wp-admin/admin-footer.php';
+require ABSPATH . 'wp-admin/admin-footer.php';

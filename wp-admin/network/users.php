@@ -34,13 +34,13 @@ if ( isset( $_GET['action'] ) ) {
 				$title       = __( 'Users' );
 				$parent_file = 'users.php';
 
-				require_once ABSPATH . 'wp-admin/admin-header.php';
+				require ABSPATH . 'wp-admin/admin-header.php';
 
 				echo '<div class="wrap">';
 				confirm_delete_users( $_POST['allusers'] );
 				echo '</div>';
 
-				require_once ABSPATH . 'wp-admin/admin-footer.php';
+				require ABSPATH . 'wp-admin/admin-footer.php';
 			} else {
 				wp_redirect( network_admin_url( 'users.php' ) );
 			}
@@ -69,13 +69,13 @@ if ( isset( $_GET['action'] ) ) {
 								$title       = __( 'Users' );
 								$parent_file = 'users.php';
 
-								require_once ABSPATH . 'wp-admin/admin-header.php';
+								require ABSPATH . 'wp-admin/admin-header.php';
 
 								echo '<div class="wrap">';
 								confirm_delete_users( $_POST['allusers'] );
 								echo '</div>';
 
-								require_once ABSPATH . 'wp-admin/admin-footer.php';
+								require ABSPATH . 'wp-admin/admin-footer.php';
 								exit;
 
 							case 'spam':
@@ -251,7 +251,7 @@ get_current_screen()->set_screen_reader_content(
 	)
 );
 
-require_once ABSPATH . 'wp-admin/admin-header.php';
+require ABSPATH . 'wp-admin/admin-header.php';
 
 if ( isset( $_REQUEST['updated'] ) && 'true' === $_REQUEST['updated'] && ! empty( $_REQUEST['action'] ) ) {
 	$message = '';
@@ -317,4 +317,4 @@ if ( isset( $_REQUEST['updated'] ) && 'true' === $_REQUEST['updated'] && ! empty
 	</form>
 </div>
 
-<?php require_once ABSPATH . 'wp-admin/admin-footer.php'; ?>
+<?php require ABSPATH . 'wp-admin/admin-footer.php'; ?>

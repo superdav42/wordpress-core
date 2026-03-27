@@ -307,7 +307,7 @@ if (
 /** This action is documented in wp-admin/edit-form-blocks.php */
 do_action( 'enqueue_block_editor_assets' );
 
-require_once ABSPATH . 'wp-admin/admin-header.php';
+require ABSPATH . 'wp-admin/admin-header.php';
 ?>
 
 <div class="edit-site" id="site-editor">
@@ -338,4 +338,4 @@ require_once ABSPATH . 'wp-admin/admin-header.php';
 
 <?php
 
-require_once ABSPATH . 'wp-admin/admin-footer.php';
+require ABSPATH . 'wp-admin/admin-footer.php';

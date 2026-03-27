@@ -25,7 +25,7 @@ $parent_file = 'plugins.php';
 $plugins = get_plugins();
 
 if ( empty( $plugins ) ) {
-	require_once ABSPATH . 'wp-admin/admin-header.php';
+	require ABSPATH . 'wp-admin/admin-header.php';
 	?>
 	<div class="wrap">
 		<h1><?php echo esc_html( $title ); ?></h1>
@@ -40,7 +40,7 @@ if ( empty( $plugins ) ) {
 		?>
 	</div>
 	<?php
-	require_once ABSPATH . 'wp-admin/admin-footer.php';
+	require ABSPATH . 'wp-admin/admin-footer.php';
 	exit;
 }
 
@@ -166,7 +166,7 @@ wp_enqueue_script( 'wp-theme-plugin-editor' );
 wp_add_inline_script( 'wp-theme-plugin-editor', sprintf( 'jQuery( function( $ ) { wp.themePluginEditor.init( $( "#template" ), %s ); } )', wp_json_encode( $settings, JSON_HEX_TAG | JSON_UNESCAPED_SLASHES ) ) );
 wp_add_inline_script( 'wp-theme-plugin-editor', sprintf( 'wp.themePluginEditor.themeOrPlugin = "plugin";' ) );
 
-require_once ABSPATH . 'wp-admin/admin-header.php';
+require ABSPATH . 'wp-admin/admin-header.php';
 
 update_recently_edited( WP_PLUGIN_DIR . '/' . $file );
 
@@ -382,4 +382,4 @@ if ( ! in_array( 'plugin_editor_notice', $dismissed_pointers, true ) ) :
 	<?php
 endif; // Editor warning notice.
 
-require_once ABSPATH . 'wp-admin/admin-footer.php';
+require ABSPATH . 'wp-admin/admin-footer.php';

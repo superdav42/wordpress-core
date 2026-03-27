@@ -1,6 +1,6 @@
 {
-  "name": "johnpbloch/wordpress-core",
-  "description": "WordPress is open source software you can use to create a beautiful website, blog, or app.",
+  "name": "superdav42/wordpress-core",
+  "description": "Experimental fork of WordPress to allow it to be ran in a long running PHP application.",
   "keywords": [
     "wordpress",
     "blog",
@@ -23,7 +23,7 @@
     "source": "https://core.trac.wordpress.org/browser"
   },
   "require": {
-    "php": ">=7.2.24",
+    "php": ">=8.1",
     "ext-json": "*"
   },
   "provide": {

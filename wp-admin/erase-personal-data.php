@@ -100,7 +100,7 @@ $requests_table->screen->set_screen_reader_content(
 $requests_table->process_bulk_action();
 $requests_table->prepare_items();
 
-require_once ABSPATH . 'wp-admin/admin-header.php';
+require ABSPATH . 'wp-admin/admin-header.php';
 ?>
 
 <div class="wrap nosubsub">
@@ -162,4 +162,4 @@ require_once ABSPATH . 'wp-admin/admin-header.php';
 </div>
 
 <?php
-require_once ABSPATH . 'wp-admin/admin-footer.php';
+require ABSPATH . 'wp-admin/admin-footer.php';

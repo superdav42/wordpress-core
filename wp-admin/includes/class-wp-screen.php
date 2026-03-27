@@ -373,15 +373,15 @@ final class WP_Screen {
 			$base .= '-user';
 		}
 
-		if ( isset( self::$_registry[ $id ] ) ) {
-			$screen = self::$_registry[ $id ];
-			if ( get_current_screen() === $screen ) {
-				return $screen;
-			}
-		} else {
+//		if ( isset( self::$_registry[ $id ] ) ) {
+//			$screen = self::$_registry[ $id ];
+//			if ( get_current_screen() === $screen ) {
+//				return $screen;
+//			}
+//		} else {
 			$screen     = new self();
 			$screen->id = $id;
-		}
+//		}
 
 		$screen->base            = $base;
 		$screen->action          = $action;

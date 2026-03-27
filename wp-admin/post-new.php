@@ -80,4 +80,4 @@ if ( apply_filters( 'replace_editor', false, $post ) !== true ) {
 	$current_screen->is_block_editor( false );
 }
 
-require_once ABSPATH . 'wp-admin/admin-footer.php';
+require ABSPATH . 'wp-admin/admin-footer.php';

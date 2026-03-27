@@ -811,7 +811,7 @@ function load_template( $_template_file, $load_once = true, $args = array() ) {
 	do_action( 'wp_before_load_template', $_template_file, $load_once, $args );
 
 	if ( $load_once ) {
-		require_once $_template_file;
+		require $_template_file;
 	} else {
 		require $_template_file;
 	}

@@ -108,7 +108,7 @@ if ( isset( $_GET['action'] ) ) {
 		$site_address = untrailingslashit( $site_details->domain . $site_details->path );
 		$submit       = __( 'Confirm' );
 
-		require_once ABSPATH . 'wp-admin/admin-header.php';
+		require ABSPATH . 'wp-admin/admin-header.php';
 		?>
 			<div class="wrap">
 				<h1><?php _e( 'Confirm your action' ); ?></h1>
@@ -144,7 +144,7 @@ if ( isset( $_GET['action'] ) ) {
 				</form>
 			</div>
 		<?php
-		require_once ABSPATH . 'wp-admin/admin-footer.php';
+		require ABSPATH . 'wp-admin/admin-footer.php';
 		exit;
 	} elseif ( array_key_exists( $_GET['action'], $manage_actions ) ) {
 		$action = $_GET['action'];
@@ -208,7 +208,7 @@ if ( isset( $_GET['action'] ) ) {
 					if ( 0 !== $site_id && ! is_main_site( $site_id ) ) {
 						switch ( $doaction ) {
 							case 'delete':
-								require_once ABSPATH . 'wp-admin/admin-header.php';
+								require ABSPATH . 'wp-admin/admin-header.php';
 								?>
 								<div class="wrap">
 									<h1><?php _e( 'Confirm your action' ); ?></h1>
@@ -238,7 +238,7 @@ if ( isset( $_GET['action'] ) ) {
 									</form>
 								</div>
 								<?php
-								require_once ABSPATH . 'wp-admin/admin-footer.php';
+								require ABSPATH . 'wp-admin/admin-footer.php';
 								exit;
 							break;
 
@@ -395,7 +395,7 @@ if ( isset( $_GET['updated'] ) ) {
 
 $wp_list_table->prepare_items();
 
-require_once ABSPATH . 'wp-admin/admin-header.php';
+require ABSPATH . 'wp-admin/admin-header.php';
 ?>
 
 <div class="wrap">
@@ -434,4 +434,4 @@ if ( isset( $_REQUEST['s'] ) && strlen( $_REQUEST['s'] ) ) {
 </div>
 <?php
 
-require_once ABSPATH . 'wp-admin/admin-footer.php'; ?>
+require ABSPATH . 'wp-admin/admin-footer.php'; ?>

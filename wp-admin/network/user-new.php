@@ -100,7 +100,7 @@ if ( isset( $_GET['update'] ) ) {
 $title       = __( 'Add User' );
 $parent_file = 'users.php';
 
-require_once ABSPATH . 'wp-admin/admin-header.php';
+require ABSPATH . 'wp-admin/admin-header.php';
 ?>
 
 <div class="wrap">
@@ -163,4 +163,4 @@ if ( isset( $add_user_errors ) && is_wp_error( $add_user_errors ) ) {
 	</form>
 </div>
 <?php
-require_once ABSPATH . 'wp-admin/admin-footer.php';
+require ABSPATH . 'wp-admin/admin-footer.php';

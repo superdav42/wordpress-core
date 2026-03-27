@@ -160,6 +160,7 @@ $is_iis7 = $is_IIS && (int) substr( $_SERVER['SERVER_SOFTWARE'], strpos( $_SERVE
  *
  * @return bool
  */
+if ( ! function_exists( 'wp_is_mobile' ) ) :
 function wp_is_mobile() {
 	if ( isset( $_SERVER['HTTP_SEC_CH_UA_MOBILE'] ) ) {
 		// This is the `Sec-CH-UA-Mobile` user agent client hint HTTP request header.
@@ -188,3 +189,4 @@ function wp_is_mobile() {
 	 */
 	return apply_filters( 'wp_is_mobile', $is_mobile );
 }
+endif;

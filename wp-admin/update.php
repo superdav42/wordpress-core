@@ -65,7 +65,7 @@ if ( isset( $_GET['action'] ) ) {
 		$submenu_file = 'plugins.php';
 
 		wp_enqueue_script( 'updates' );
-		require_once ABSPATH . 'wp-admin/admin-header.php';
+		require ABSPATH . 'wp-admin/admin-header.php';
 
 		$nonce = 'upgrade-plugin_' . $plugin;
 		$url   = 'update.php?action=upgrade-plugin&plugin=' . urlencode( $plugin );
@@ -73,7 +73,7 @@ if ( isset( $_GET['action'] ) ) {
 		$upgrader = new Plugin_Upgrader( new Plugin_Upgrader_Skin( compact( 'title', 'nonce', 'url', 'plugin' ) ) );
 		$upgrader->upgrade( $plugin );
 
-		require_once ABSPATH . 'wp-admin/admin-footer.php';
+		require ABSPATH . 'wp-admin/admin-footer.php';
 
 	} elseif ( 'activate-plugin' === $action ) {
 		if ( ! current_user_can( 'update_plugins' ) ) {
@@ -129,7 +129,7 @@ if ( isset( $_GET['action'] ) ) {
 		$parent_file  = 'plugins.php';
 		$submenu_file = 'plugin-install.php';
 
-		require_once ABSPATH . 'wp-admin/admin-header.php';
+		require ABSPATH . 'wp-admin/admin-header.php';
 
 		/* translators: %s: Plugin name and version. */
 		$title = sprintf( __( 'Installing Plugin: %s' ), $api->name . ' ' . $api->version );
@@ -144,7 +144,7 @@ if ( isset( $_GET['action'] ) ) {
 		$upgrader = new Plugin_Upgrader( new Plugin_Installer_Skin( compact( 'title', 'url', 'nonce', 'plugin', 'api' ) ) );
 		$upgrader->install( $api->download_link );
 
-		require_once ABSPATH . 'wp-admin/admin-footer.php';
+		require ABSPATH . 'wp-admin/admin-footer.php';
 
 	} elseif ( 'upload-plugin' === $action ) {
 
@@ -165,7 +165,7 @@ if ( isset( $_GET['action'] ) ) {
 		$parent_file  = 'plugins.php';
 		$submenu_file = 'plugin-install.php';
 
-		require_once ABSPATH . 'wp-admin/admin-header.php';
+		require ABSPATH . 'wp-admin/admin-header.php';
 
 		/* translators: %s: File name. */
 		$title = sprintf( __( 'Installing plugin from uploaded file: %s' ), esc_html( basename( $file_upload->filename ) ) );
@@ -183,7 +183,7 @@ if ( isset( $_GET['action'] ) ) {
 			$file_upload->cleanup();
 		}
 
-		require_once ABSPATH . 'wp-admin/admin-footer.php';
+		require ABSPATH . 'wp-admin/admin-footer.php';
 
 	} elseif ( 'upload-plugin-cancel-overwrite' === $action ) {
 		if ( ! current_user_can( 'upload_plugins' ) ) {
@@ -220,7 +220,7 @@ if ( isset( $_GET['action'] ) ) {
 		$parent_file  = 'themes.php';
 		$submenu_file = 'themes.php';
 
-		require_once ABSPATH . 'wp-admin/admin-header.php';
+		require ABSPATH . 'wp-admin/admin-header.php';
 
 		$nonce = 'upgrade-theme_' . $theme;
 		$url   = 'update.php?action=upgrade-theme&theme=' . urlencode( $theme );
@@ -228,7 +228,7 @@ if ( isset( $_GET['action'] ) ) {
 		$upgrader = new Theme_Upgrader( new Theme_Upgrader_Skin( compact( 'title', 'nonce', 'url', 'theme' ) ) );
 		$upgrader->upgrade( $theme );
 
-		require_once ABSPATH . 'wp-admin/admin-footer.php';
+		require ABSPATH . 'wp-admin/admin-footer.php';
 	} elseif ( 'update-selected-themes' === $action ) {
 		if ( ! current_user_can( 'update_themes' ) ) {
 			wp_die( __( 'Sorry, you are not allowed to update themes for this site.' ) );
@@ -285,7 +285,7 @@ if ( isset( $_GET['action'] ) ) {
 		$parent_file  = 'themes.php';
 		$submenu_file = 'themes.php';
 
-		require_once ABSPATH . 'wp-admin/admin-header.php';
+		require ABSPATH . 'wp-admin/admin-header.php';
 
 		/* translators: %s: Theme name and version. */
 		$title = sprintf( __( 'Installing Theme: %s' ), $api->name . ' ' . $api->version );
@@ -296,7 +296,7 @@ if ( isset( $_GET['action'] ) ) {
 		$upgrader = new Theme_Upgrader( new Theme_Installer_Skin( compact( 'title', 'url', 'nonce', 'plugin', 'api' ) ) );
 		$upgrader->install( $api->download_link );
 
-		require_once ABSPATH . 'wp-admin/admin-footer.php';
+		require ABSPATH . 'wp-admin/admin-footer.php';
 
 	} elseif ( 'upload-theme' === $action ) {
 
@@ -317,7 +317,7 @@ if ( isset( $_GET['action'] ) ) {
 		$parent_file  = 'themes.php';
 		$submenu_file = 'theme-install.php';
 
-		require_once ABSPATH . 'wp-admin/admin-header.php';
+		require ABSPATH . 'wp-admin/admin-header.php';
 
 		/* translators: %s: File name. */
 		$title = sprintf( __( 'Installing theme from uploaded file: %s' ), esc_html( basename( $file_upload->filename ) ) );
@@ -335,7 +335,7 @@ if ( isset( $_GET['action'] ) ) {
 			$file_upload->cleanup();
 		}
 
-		require_once ABSPATH . 'wp-admin/admin-footer.php';
+		require ABSPATH . 'wp-admin/admin-footer.php';
 
 	} elseif ( 'upload-theme-cancel-overwrite' === $action ) {
 		if ( ! current_user_can( 'upload_themes' ) ) {

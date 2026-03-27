@@ -25,7 +25,7 @@ $header_alt_text         = sprintf(
 	$display_version
 );
 
-require_once ABSPATH . 'wp-admin/admin-header.php';
+require ABSPATH . 'wp-admin/admin-header.php';
 ?>
 <div class="wrap about__container">
 
@@ -117,4 +117,4 @@ require_once ABSPATH . 'wp-admin/admin-header.php';
 	</div>
 
 </div>
-<?php require_once ABSPATH . 'wp-admin/admin-footer.php'; ?>
+<?php require ABSPATH . 'wp-admin/admin-footer.php'; ?>
